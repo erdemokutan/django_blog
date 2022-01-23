@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
- <h1>Main Page</h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"
+{% endblock %}
+
+ {% block title %} Homepage {% endblock %}
+{% block content %}
+ <div class="container mt-3">
+     <div class="row">
+         <div class="col-3">
+                {% include 'partials/categories.html' %}
+         </div>
+         <div class="col-9">
+             <h1>Homepage</h1>
+             <hr>
+            {% include 'partials/blog.html' %}
+
+                 </div>
+             </div>
+         </div>
+
+     </div>
+ </div>
+
+{% endblock %},
+
+{% block js_files %}
+    <script>src="{% static 'blog/js/script.js' %}"</script>
+{% endblock %}

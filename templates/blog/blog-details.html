@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Blog Details: {{ id }}</h1>
-</body>
-</html>
+{% extends "base.html" %}
+ {% block title %} Blog Details{% endblock %}
+{% block content %}
+
+    <div class="container mt-3">
+     <div class="row">
+         <div class="col-3">
+                {% include 'partials/categories.html' %}
+         </div>
+         <div class="col-9">
+             <h1>Blog Details: {{ id }}</h1>
+
+
+
+                 </div>
+             </div>
+         </div>
+
+     </div>
+ </div>
+{% endblock %}
