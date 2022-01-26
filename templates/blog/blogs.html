@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
  {% block title %} Blogs{% endblock %}
 {% block content %}
 <div class="container mt-3">
@@ -9,7 +10,11 @@
          <div class="col-9">
              <h1>All Blogs</h1>
              <hr>
-            {% include 'partials/blog.html' %}
+             {% for blog in blogs %}
+                 {% if blog.is_active %}
+                  {% include 'partials/blog.html' %}
+                 {% endif %}
+             {% endfor %}
 
                  </div>
              </div>
